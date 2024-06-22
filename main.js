@@ -31,7 +31,7 @@ async function checkWeather() {
     console.log(err);
     document
       .querySelector(".status")
-      .setAttribute("src", `/images/haze.png.png`);
+      .setAttribute("src", `./images/haze.png.png`);
   }
   // document
   //   .querySelector(".status")
