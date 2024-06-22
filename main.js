@@ -23,54 +23,36 @@ async function checkWeather() {
   city.textContent = data.name;
   humidity.textContent = data.main.humidity + "%";
   windSpeed.textContent = data.wind.speed + " km/h";
-  switch (data.weather[0].main == "Clear") {
+  switch (data.weather[0].main) {
     case "Clear":
-      document
-        .querySelector(".status")
-        .setAttribute("src", `./images/Clear.png`);
+      document.querySelector(".status").setAttribute("src", `./Clear.png`);
       break;
     case "Clouds":
-      document
-        .querySelector(".status")
-        .setAttribute("src", `./images/Clouds.png`);
+      document.querySelector(".status").setAttribute("src", `./Clouds.png`);
       break;
     case "Drizzle":
-      document
-        .querySelector(".status")
-        .setAttribute("src", `./images/Drizzle.png`);
+      document.querySelector(".status").setAttribute("src", `./Drizzle.png`);
       break;
     case "Fog":
-      document.querySelector(".status").setAttribute("src", `./images/Fog.png`);
+      document.querySelector(".status").setAttribute("src", `./Fog.png`);
       break;
     case "Haze":
-      document
-        .querySelector(".status")
-        .setAttribute("src", `./images/Haze.png`);
+      document.querySelector(".status").setAttribute("src", `./Haze.png`);
       break;
     case "Mist":
-      document
-        .querySelector(".status")
-        .setAttribute("src", `./images/Mist.png`);
+      document.querySelector(".status").setAttribute("src", `./Mist.png`);
       break;
     case "Rain":
-      document
-        .querySelector(".status")
-        .setAttribute("src", `./images/Rain.png`);
+      document.querySelector(".status").setAttribute("src", `./Rain.png`);
       break;
     case "Snow":
-      document
-        .querySelector(".status")
-        .setAttribute("src", `./images/Snow.png`);
+      document.querySelector(".status").setAttribute("src", `./Snow.png`);
       break;
     case "Wind":
-      document
-        .querySelector(".status")
-        .setAttribute("src", `./images/Wind.png`);
+      document.querySelector(".status").setAttribute("src", `./Wind.png`);
       break;
     default:
-      document
-        .querySelector(".status")
-        .setAttribute("src", `./images/Mist.png`);
+      document.querySelector(".status").setAttribute("src", `./Mist.png`);
       break;
   }
   // try {
