@@ -30,9 +30,8 @@ async function checkWeather() {
         .setAttribute("src", `./images/Clear.png`);
       break;
     case "Clouds":
-      document
-        .querySelector(".status")
-        .setAttribute("src", `./images/Clouds.png`);
+      document.querySelector(".status").src = "./images/Clouds.png";
+      // .setAttribute("src", `./images/Clouds.png`);
       break;
     case "Drizzle":
       document
