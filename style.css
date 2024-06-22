@@ -1,0 +1,105 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  transition: 1s;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+}
+
+.box {
+  width: 470px;
+  border-radius: 15px;
+  box-shadow: 0 0 0 0;
+  background: linear-gradient(135deg, #00feba, #5b548a);
+}
+
+.box .search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}
+
+.box .search .error {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: red;
+  font-weight: bold;
+  display: none;
+}
+
+.box .search input {
+  width: calc(100% - 60px);
+  padding: 15px;
+  border: none;
+  border-radius: 25px;
+  color: #222;
+}
+
+.box .search input:focus {
+  outline: none;
+}
+.box .search .icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.box .search .icon img {
+  width: 18px;
+}
+
+.box .main {
+  text-align: center;
+}
+
+.box .main img {
+  width: 180px;
+}
+
+.box .main h2 {
+  font-size: 60px;
+  color: #fff;
+  margin: 20px 0;
+}
+
+.box .buttom {
+  display: flex;
+  align-items: center;
+  padding: 50px 0;
+}
+.box .buttom > div {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box .buttom > div .icon img {
+  width: 35px;
+  margin-right: 5px;
+}
+.box .buttom > div .value {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  margin: 0 10px;
+}
+
+.box .buttom > div .value span {
+  font-size: 18px;
+}
