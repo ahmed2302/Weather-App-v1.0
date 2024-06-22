@@ -18,12 +18,12 @@ async function checkWeather() {
     }, 10000);
   }
   const data = await response.json();
-  console.log(data);
   tempValue.textContent = Math.round(data.main.temp) + "°C";
   city.textContent = data.name;
   humidity.textContent = data.main.humidity + "%";
   windSpeed.textContent = data.wind.speed + " km/h";
-  switch (data.weather[0].main) {
+  let status = data.weather[0].main;
+  switch (status) {
     case "Clear":
       document.querySelector(".status").setAttribute("src", `./Clear.png`);
       break;
@@ -55,17 +55,6 @@ async function checkWeather() {
       document.querySelector(".status").setAttribute("src", `./Mist.png`);
       break;
   }
-  // try {
-  //   document
-  //     .querySelector(".status")
-  //     .setAttribute("src", `./images/${data.weather[0].main}.png`);
-  // } catch (err) {
-  //   console.log(err);
-  //   document.querySelector(".status").setAttribute("src", `./images/haze.png`);
-  // }
-  // document
-  //   .querySelector(".status")
-  //   .setAttribute("src", `/images/${data.weather[0].main}.png`);
 }
 
 window.onload = () => {
