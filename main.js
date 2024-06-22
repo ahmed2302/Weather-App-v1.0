@@ -23,16 +23,64 @@ async function checkWeather() {
   city.textContent = data.name;
   humidity.textContent = data.main.humidity + "%";
   windSpeed.textContent = data.wind.speed + " km/h";
-  try {
-    document
-      .querySelector(".status")
-      .setAttribute("src", `./images/${data.weather[0].main}.png`);
-  } catch (err) {
-    console.log(err);
-    document
-      .querySelector(".status")
-      .setAttribute("src", `./images/haze.png`);
+  switch (data.weather[0].main == "Clear") {
+    case "Clear":
+      document
+        .querySelector(".status")
+        .setAttribute("src", `./images/Clear.png`);
+      break;
+    case "Clouds":
+      document
+        .querySelector(".status")
+        .setAttribute("src", `./images/Clouds.png`);
+      break;
+    case "Drizzle":
+      document
+        .querySelector(".status")
+        .setAttribute("src", `./images/Drizzle.png`);
+      break;
+    case "Fog":
+      document.querySelector(".status").setAttribute("src", `./images/Fog.png`);
+      break;
+    case "Haze":
+      document
+        .querySelector(".status")
+        .setAttribute("src", `./images/Haze.png`);
+      break;
+    case "Mist":
+      document
+        .querySelector(".status")
+        .setAttribute("src", `./images/Mist.png`);
+      break;
+    case "Rain":
+      document
+        .querySelector(".status")
+        .setAttribute("src", `./images/Rain.png`);
+      break;
+    case "Snow":
+      document
+        .querySelector(".status")
+        .setAttribute("src", `./images/Snow.png`);
+      break;
+    case "Wind":
+      document
+        .querySelector(".status")
+        .setAttribute("src", `./images/Wind.png`);
+      break;
+    default:
+      document
+        .querySelector(".status")
+        .setAttribute("src", `./images/Mist.png`);
+      break;
   }
+  // try {
+  //   document
+  //     .querySelector(".status")
+  //     .setAttribute("src", `./images/${data.weather[0].main}.png`);
+  // } catch (err) {
+  //   console.log(err);
+  //   document.querySelector(".status").setAttribute("src", `./images/haze.png`);
+  // }
   // document
   //   .querySelector(".status")
   //   .setAttribute("src", `/images/${data.weather[0].main}.png`);
