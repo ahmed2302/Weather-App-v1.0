@@ -26,12 +26,12 @@ async function checkWeather() {
   try {
     document
       .querySelector(".status")
-      .setAttribute("src", `/images/${data.weather[0].main}.png`);
+      .setAttribute("src", `./images/${data.weather[0].main}.png`);
   } catch (err) {
     console.log(err);
     document
       .querySelector(".status")
-      .setAttribute("src", `./images/haze.png.png`);
+      .setAttribute("src", `./images/haze.png`);
   }
   // document
   //   .querySelector(".status")
